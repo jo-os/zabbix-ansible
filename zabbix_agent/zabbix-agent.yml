@@ -1,0 +1,27 @@
+---
+- hosts: deu
+  become: true
+  tasks:
+# Tasks specific for macOS
+  - name: "macOS | Download the Zabbix package"
+    ansible.builtin.get_url:
+      url: "https://cdn.zabbix.com/zabbix/binaries/stable/6.4/6.4.8/zabbix_agent-6.4.8-macos-amd64-openssl.pkg"
+      dest: "/tmp/zabbix_agent-6.4.8-macos-amd64-openssl.pkg"
+      mode: 0644
+
+  - name: "macOS | Install the Zabbix package"
+    ansible.builtin.command: installer -pkg "/tmp/zabbix_agent-6.4.8-macos-amd64-openssl.pkg" -target /
+    become: true
+
+  - name: "Copy config"
+    ansible.builtin.copy:
+      src: zabbix_agentd.conf
+      dest: /usr/local/etc/zabbix/zabbix_agentd.conf
+      owner: root
+      group: wheel
+      mode: '0644'
+
+  - name: Restart zabbix
+    community.general.launchd:
+      name: com.zabbix.zabbix_agentd
+      state: restarted

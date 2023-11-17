@@ -1,0 +1,82 @@
+---
+# tasks file for zabbix_agent
+
+# - name: "Including API"
+#   include_tasks: "my_api.yml"
+
+# - debug:
+#     var: inventory_hostname
+
+#############################################################
+- name: "Get ID"
+  uri: 
+    url: "http://{{ inventory_hostname}}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('file','id.json') }}"
+  register: user_id
+#############################################################
+- name: "Create group for routers"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'routers_group_add.j2') }}"
+  register: routers_group_id
+
+- name: "Create group for printers"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'printers_group_add.j2') }}"
+  register: printers_group_id
+#############################################################
+- name: "Create template for color printers"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'printers_color.j2') }}"
+  register: printers_color_id
+
+- name: "Create template for black printers"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'printers_black.j2') }}"
+  register: printers_black_id
+#############################################################
+- name: "Create items for printers"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'items.j2') }}"
+  loop: "{{ my_items }}"
+#############################################################
+- name: "Create triggers for printers"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'triggers_add.j2') }}"
+#############################################################
+- name: "Create hosts"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'hosts.j2') }}"
+  register: host_id
+  loop: "{{ my_hosts }}"
+#############################################################
+- name: "Add dashboard"
+  uri: 
+    url: "http://{{ inventory_hostname }}/api_jsonrpc.php"
+    method: POST
+    body_format: json
+    body: "{{ lookup('template', 'dashboard.j2') }}"
+  register: test
+#############################################################

@@ -1,0 +1,19 @@
+---
+# handlers file for zabbix-agent
+
+- name: restart zabbix-agent
+  service:
+    name: "{{ zabbix_agent_service }}"
+    state: restarted
+    enabled: true
+  become: true
+  when:
+    - not zabbix_agent_docker
+    - ansible_os_family != "Windows" and ansible_os_family != "Darwin"
+
+- name: restart mac zabbix agent
+  command: "launchctl kickstart -k system/{{ zabbix_agent_service }}"
+  become: true
+  when:
+    - not zabbix_agent_docker
+    - ansible_os_family == "Darwin"

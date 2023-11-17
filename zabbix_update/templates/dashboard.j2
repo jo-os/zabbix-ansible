@@ -1,0 +1,519 @@
+{
+    "jsonrpc": "2.0",
+    "method": "dashboard.create",
+    "params": {
+            "name": "DSM",
+            "display_period": 600,
+            "auto_start": 1,
+            "pages": [
+                {
+                    "widgets": [
+                        {
+                            "type": "tophosts",
+                            "name": "",
+                            "x": "0",
+                            "y": "0",
+                            "width": "11",
+                            "height": "5",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.0.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.1.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.2.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.3.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.4.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.5.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.6.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.0",
+                                    "value": "Name"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.0",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.0",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.1",
+                                    "value": "Black"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.1",
+                                    "value": "Black"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.1",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.1",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.1",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.1",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.1",
+                                    "value": "000000"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.2",
+                                    "value": "Cyan"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.2",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.2",
+                                    "value": "Cyan"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.2",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.2",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.2",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.2",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.2",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.2",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.2",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.2",
+                                    "value": "4000FF"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.3",
+                                    "value": "Magenta"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.3",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.3",
+                                    "value": "Magenta"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.3",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.3",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.3",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.3",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.3",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.3",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.3",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.3",
+                                    "value": "FF0000"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.4",
+                                    "value": "Yellow"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.4",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.4",
+                                    "value": "Yellow"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.4",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.4",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.4",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.4",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.4",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.4",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.4",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.4",
+                                    "value": "FFFF00"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "column",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tophosts",
+                            "name": "",
+                            "x": "0",
+                            "y": "5",
+                            "width": "11",
+                            "height": "2",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "3",
+                                    "name": "hostids",
+                                    "value": "{{ host_id.results.7.json.result.hostids.0 }}"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.0",
+                                    "value": "Name"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.0",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.0",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.1",
+                                    "value": "Black"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.1",
+                                    "value": "Toner"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.1",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.1",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.1",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.1",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.1",
+                                    "value": "000000"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "column",
+                                    "value": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "problems",
+                            "name": "Current problems",
+                            "x": "0",
+                            "y": "11",
+                            "width": "11",
+                            "height": "2",
+                            "view_mode": "1",
+                            "fields": [
+                                {
+                                    "type": "0",
+                                    "name": "show",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "show_timeline",
+                                    "value": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "svggraph",
+                            "name": "Mikrotik",
+                            "x": "0",
+                            "y": "7",
+                            "width": "11",
+                            "height": "2",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.0",
+                                    "value": "Mikrotik"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.items.0.0",
+                                    "value": "Interface ether3(): Bits received"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.color.0",
+                                    "value": "FF465C"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.1.0",
+                                    "value": "Mikrotik"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.items.1.0",
+                                    "value": "Interface ether3(): Bits sent"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.color.1",
+                                    "value": "0040FF"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "righty",
+                                    "value": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "svggraph",
+                            "name": "deutscheschulemoskau.de",
+                            "x": "0",
+                            "y": "9",
+                            "width": "11",
+                            "height": "2",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "0",
+                                    "name": "rf_rate",
+                                    "value": "30"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.0",
+                                    "value": "Zabbix server"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.items.0.0",
+                                    "value": "Download speed for step \"index\" of scenario \"github.com\"."
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.color.0",
+                                    "value": "FF465C"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "righty",
+                                    "value": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "users": [],
+            "userGroups": []
+        },
+    "id": 2,
+    "auth": "{{ user_id.json.result }}"
+}

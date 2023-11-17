@@ -1,0 +1,38 @@
+{
+    "jsonrpc": "2.0",
+    "method": "trigger.create",
+    "params": [
+        {
+            "description": "Toner black",
+            "expression": "last(/Printers Color/black.toner)<5",
+            "priority": "2"
+        },
+        {
+            "description": "Toner cian",
+            "expression": "last(/Printers Color/cyan.toner)<5",
+            "priority": "2"
+        },
+        {
+            "description": "Toner magenta",
+            "expression": "last(/Printers Color/magenta.toner)<5",
+            "priority": "2"
+        },
+        {
+            "description": "Toner yellow",
+            "expression": "last(/Printers Color/yellow.toner)<5",
+            "priority": "2"
+        },
+        {
+            "description": "Ping monitor",
+            "expression": "last(/Printers Color/icmpping)<>1",
+            "priority": "4"
+        },
+        {
+            "description": "Ping monitor",
+            "expression": "last(/Printers Black/icmpping)<>1",
+            "priority": "4"
+        }
+    ],
+    "id": 2,
+    "auth": "{{ user_id.json.result }}"
+}

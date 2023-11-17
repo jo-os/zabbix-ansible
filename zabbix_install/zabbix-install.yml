@@ -1,0 +1,93 @@
+---
+- hosts: zabbix
+  become: true
+  tasks:
+  ############# Install Docker + ##############################################
+    - name: Install aptitude
+      apt:
+        name: aptitude
+        state: latest
+        update_cache: true
+
+    - name: Install required system packages
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - python3-pip
+          - virtualenv
+          - python3-setuptools
+        state: latest
+        update_cache: true
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu focal stable
+        state: present
+
+    - name: Update apt and install docker-ce
+      apt:
+        name: docker-ce
+        state: latest
+        update_cache: true
+
+    - name: Install Docker Module for Python
+      pip:
+        name: docker
+  #############################################################################
+  ############# Zabbix Docker #################################################
+    - name: Postgres container
+      docker_container:
+        name: netology-db
+        image: postgres:latest
+        ports:
+        - 5432:5432
+        volumes:
+        - ./pg_data:/var/lib/postgresql/data/pgdata
+        env:
+          POSTGRES_DB: "zabbix"
+          POSTGRES_USER: "postgres"
+          POSTGRES_PASSWORD: "qwe123qwe123qwe"
+          PGDATA: /var/lib/pgsql/data/userdata
+        restart: true
+
+    - name: Zabbix Server
+      community.docker.docker_container:
+        name: zabbix-server
+        image: zabbix/zabbix-server-pgsql
+        links:
+          - netology-db
+        env:
+          DB_SERVER_HOST: "{{ inventory_hostname}}"
+          POSTGRES_DBNAME: "zabbix"
+          POSTGRES_USER: "postgres"
+          POSTGRES_PASSWORD: "qwe123qwe123qwe"
+        ports:
+          - 10051:10051
+        restart: true
+
+    - name: Zabbix GUI
+      community.docker.docker_container:
+          name: zabbix_wgui
+          image: zabbix/zabbix-web-apache-pgsql
+          links:
+          - netology-db
+          - zabbix-server
+          env:
+            DB_SERVER_HOST: "{{ inventory_hostname}}"
+            POSTGRES_USER: "postgres"
+            POSTGRES_PASSWORD: "qwe123qwe123qwe"
+            ZBX_SERVER_HOST: "{{ inventory_hostname}}"
+            PHP_TZ: "Europe/Moscow"
+          ports:
+          - 80:8080
+          - 443:8443
+          restart: true
+  #############################################################################

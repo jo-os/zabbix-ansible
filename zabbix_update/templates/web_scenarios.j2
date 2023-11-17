@@ -1,0 +1,20 @@
+{
+    "jsonrpc": "2.0",
+    "method": "httptest.create",
+    "params": {
+        "name": "github.com",
+        "hostid": "10084",
+        "steps": [
+            {
+                "name": "index",
+                "url": "https://github.com",
+                "required": "2023 GitHub, Inc.",
+                "status_codes": "200",
+                "no": 1,
+                "timeout": "15s"
+            }
+        ]
+    },
+    "id": 2,
+    "auth" : "{{ user_id.json.result }}"
+}
