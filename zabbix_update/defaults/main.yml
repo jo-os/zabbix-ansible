@@ -44,11 +44,6 @@ hosts_templates:
   konica: "{{ printers_color_id.json.result.templateids.0 }}"
   kyocera: "{{ printers_black_id.json.result.templateids.0 }}"
   mikrotik: "10484"
-my_hostgroups: [printers, routers]
-
-hostgroups_name:
-  printers: "Printers"
-  routers: "Routers"
 
 my_items: [black,cyan,magenta,yellow,ping1,ping2,toner_full,toner_rest,toner]
 
