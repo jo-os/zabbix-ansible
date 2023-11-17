@@ -1,0 +1,18 @@
+{
+    "jsonrpc": "2.0",
+    "method": "item.create",
+    "params": {
+        "name": "{{ items_name[item] }}",
+        "key_": "{{ items_key[item] }}",
+        "hostid": "{{ items_hostid[item] }}",
+        "type": "{{ items_type[item] }}",
+        "snmp_oid": "{{ items_oid[item] }}",
+        "params": "{{ items_params[item] }}",
+        "value_type": 3,
+        "delay": "600s",
+        "units": "",
+        "interfaceid": "0"
+    },
+    "id": 2,
+    "auth" : "{{ user_id.json.result }}"
+}
