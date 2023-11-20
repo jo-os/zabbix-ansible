@@ -1,4 +1,4 @@
-Установка zabbix с через apt на докер.
+Установка zabbix с apt на Docker.
 - установка Docker
 - запуск Postgres контейнера
 - запуск Zabbix сервер контейнера
