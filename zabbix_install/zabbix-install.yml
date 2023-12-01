@@ -1,6 +1,10 @@
 ---
 - hosts: zabbix
   become: true
+  vars:
+      pg_db: "zabbix"
+      pg_user: "postgres"
+      pg_pass: "qwe123qwe123qwe"
   tasks:
   ############# Install Docker + ##############################################
     - name: Install aptitude
@@ -45,45 +49,45 @@
   ############# Zabbix Docker #################################################
     - name: Postgres container
       docker_container:
-        name: netology-db
+        name: postgres_db
         image: postgres:latest
         ports:
         - 5432:5432
         volumes:
         - ./pg_data:/var/lib/postgresql/data/pgdata
         env:
-          POSTGRES_DB: "zabbix"
-          POSTGRES_USER: "postgres"
-          POSTGRES_PASSWORD: "qwe123qwe123qwe"
+          POSTGRES_DB: "{{ pg_db }}"
+          POSTGRES_USER: "{{ pg_user }}"
+          POSTGRES_PASSWORD: "{{ pg_pass }}" 
           PGDATA: /var/lib/pgsql/data/userdata
         restart: true
 
     - name: Zabbix Server
-      community.docker.docker_container:
+      docker_container:
         name: zabbix-server
         image: zabbix/zabbix-server-pgsql
         links:
-          - netology-db
+          - postgres_db
         env:
-          DB_SERVER_HOST: "{{ inventory_hostname}}"
-          POSTGRES_DBNAME: "zabbix"
-          POSTGRES_USER: "postgres"
-          POSTGRES_PASSWORD: "qwe123qwe123qwe"
+          DB_SERVER_HOST: "{{ inventory_hostname }}"
+          POSTGRES_DBNAME: "{{ pg_db }}"
+          POSTGRES_USER: "{{ pg_user }}"
+          POSTGRES_PASSWORD: "{{ pg_pass }}"
         ports:
           - 10051:10051
         restart: true
 
     - name: Zabbix GUI
-      community.docker.docker_container:
+      docker_container:
           name: zabbix_wgui
           image: zabbix/zabbix-web-apache-pgsql
           links:
-          - netology-db
+          - postgres_db
           - zabbix-server
           env:
-            DB_SERVER_HOST: "{{ inventory_hostname}}"
-            POSTGRES_USER: "postgres"
-            POSTGRES_PASSWORD: "qwe123qwe123qwe"
+            DB_SERVER_HOST: "{{ inventory_hostname }}"
+            POSTGRES_USER: "{{ pg_user }}"
+            POSTGRES_PASSWORD: "{{ pg_pass }}"
             ZBX_SERVER_HOST: "{{ inventory_hostname}}"
             PHP_TZ: "Europe/Moscow"
           ports:
