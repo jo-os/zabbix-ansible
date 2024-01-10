@@ -1,0 +1,680 @@
+{
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "dashboardid": "301",
+            "name": "DSM",
+            "userid": "1",
+            "private": "1",
+            "display_period": "600",
+            "auto_start": "1",
+            "uuid": "",
+            "pages": [
+                {
+                    "dashboard_pageid": "6489",
+                    "name": "",
+                    "display_period": "0",
+                    "widgets": [
+                        {
+                            "widgetid": "19300",
+                            "type": "tophosts",
+                            "name": "Color Printers",
+                            "x": "0",
+                            "y": "0",
+                            "width": "10",
+                            "height": "7",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "0",
+                                    "name": "rf_rate",
+                                    "value": "600"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.0",
+                                    "value": "Name"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.0",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.0",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.1",
+                                    "value": "Black"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.1",
+                                    "value": "Black"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.1",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.1",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.1",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.1",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.1",
+                                    "value": "000000"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.2",
+                                    "value": "Cyan"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.2",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.2",
+                                    "value": "Cyan"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.2",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.2",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.2",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.2",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.2",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.2",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.2",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.2",
+                                    "value": "4000FF"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.3",
+                                    "value": "Magenta"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.3",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.3",
+                                    "value": "Magenta"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.3",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.3",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.3",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.3",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.3",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.3",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.3",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.3",
+                                    "value": "FF0000"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.4",
+                                    "value": "Yellow"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.4",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.4",
+                                    "value": "Yellow"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.4",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.4",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.4",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.4",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.4",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.4",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.4",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.4",
+                                    "value": "FFFF00"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "column",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "2",
+                                    "name": "groupids",
+                                    "value": "29"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "count",
+                                    "value": "15"
+                                }
+                            ]
+                        },
+                        {
+                            "widgetid": "19302",
+                            "type": "problems",
+                            "name": "Current problems",
+                            "x": "10",
+                            "y": "5",
+                            "width": "14",
+                            "height": "3",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "0",
+                                    "name": "show",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "show_timeline",
+                                    "value": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "widgetid": "19303",
+                            "type": "clock",
+                            "name": "",
+                            "x": "19",
+                            "y": "0",
+                            "width": "5",
+                            "height": "2",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "0",
+                                    "name": "clock_type",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "show",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "show",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "adv_conf",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "date_size",
+                                    "value": "60"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "time_size",
+                                    "value": "70"
+                                }
+                            ]
+                        },
+                        {
+                            "widgetid": "19304",
+                            "type": "item",
+                            "name": "",
+                            "x": "19",
+                            "y": "2",
+                            "width": "5",
+                            "height": "3",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "4",
+                                    "name": "itemid",
+                                    "value": "23277"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "show",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "show",
+                                    "value": "4"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "adv_conf",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "decimal_size",
+                                    "value": "55"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "value_size",
+                                    "value": "75"
+                                }
+                            ]
+                        },
+                        {
+                            "widgetid": "19305",
+                            "type": "svggraph",
+                            "name": "Mikrotik",
+                            "x": "10",
+                            "y": "0",
+                            "width": "9",
+                            "height": "5",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "0",
+                                    "name": "rf_rate",
+                                    "value": "30"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.0",
+                                    "value": "Mikrotik"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.items.0.0",
+                                    "value": "Interface ether2(): Bits received"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.1.0",
+                                    "value": "Mikrotik"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.items.1.0",
+                                    "value": "Interface ether2(): Bits sent"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "righty",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.color.0",
+                                    "value": "FF0000"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.color.1",
+                                    "value": "4000FF"
+                                }
+                            ]
+                        },
+                        {
+                            "widgetid": "19301",
+                            "type": "tophosts",
+                            "name": "Black Printers",
+                            "x": "0",
+                            "y": "7",
+                            "width": "10",
+                            "height": "7",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "0",
+                                    "name": "rf_rate",
+                                    "value": "600"
+                                },
+                                {
+                                    "type": "2",
+                                    "name": "groupids",
+                                    "value": "30"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.0",
+                                    "value": "Name"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.0",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.0",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.name.1",
+                                    "value": "Toner"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.data.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.item.1",
+                                    "value": "Toner"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.timeshift.1",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.aggregate_function.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.min.1",
+                                    "value": "5"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.max.1",
+                                    "value": "90"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.decimal_places.1",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.display.1",
+                                    "value": "3"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "columns.history.1",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "columns.base_color.1",
+                                    "value": "000000"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "column",
+                                    "value": "1"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "count",
+                                    "value": "15"
+                                }
+                            ]
+                        },
+                        {
+                            "widgetid": "19306",
+                            "type": "svggraph",
+                            "name": "",
+                            "x": "10",
+                            "y": "8",
+                            "width": "14",
+                            "height": "6",
+                            "view_mode": "0",
+                            "fields": [
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.0",
+                                    "value": "HP GS-Color"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.1",
+                                    "value": "HP H102"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.2",
+                                    "value": "HP H108"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.3",
+                                    "value": "HP H204"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.4",
+                                    "value": "HP Hort"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.5",
+                                    "value": "HP Kunst"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.6",
+                                    "value": "HP Nawi"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.0.7",
+                                    "value": "HP SSA"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.items.0.0",
+                                    "value": "Paper"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.color.0",
+                                    "value": "4000FF"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "righty",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.1.0",
+                                    "value": "HP KGL"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.hosts.1.1",
+                                    "value": "HP KiGa"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.items.1.0",
+                                    "value": "Paper"
+                                },
+                                {
+                                    "type": "1",
+                                    "name": "ds.color.1",
+                                    "value": "FF0000"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "ds.width.0",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "ds.fill.0",
+                                    "value": "0"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "ds.width.1",
+                                    "value": "2"
+                                },
+                                {
+                                    "type": "0",
+                                    "name": "ds.fill.1",
+                                    "value": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "users": [],
+            "userGroups": []
+        }
+    ],
+    "id": 2
+}
